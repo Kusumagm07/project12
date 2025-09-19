@@ -1,0 +1,6 @@
+timestamp,sensor_id,location,temperature,humidity,soil_moisture,soil_ph,light_intensity
+2024-01-01T00:00:00,SENSOR001,north_field_1,18.5,65,38,6.8,850
+2024-01-01T00:00:00,SENSOR002,south_field_1,24.2,70,42,7.1,900
+2024-01-01T00:00:00,SENSOR003,east_field_1,21.0,68,40,7.0,875
+2024-01-01T00:00:00,SENSOR004,west_field_1,19.8,62,35,6.9,825
+2024-01-01T00:00:00,SENSOR005,central_field_1,22.5,67,39,7.2,860

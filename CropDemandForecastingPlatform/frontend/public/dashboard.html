@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AgriTech Platform</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="dashboard-nav">
+            <div class="logo">AgriTech</div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </nav>
+
+        <main class="dashboard-content">
+            <h1>Crop Demand Forecasting Dashboard</h1>
+
+            <!-- Input Form Section -->
+            <section class="input-section">
+                <h2>Enter Forecast Details</h2>
+                <form id="forecastForm" class="forecast-form">
+                    <div class="form-group">
+                        <label for="cropType">Crop Type</label>
+                        <select id="cropType" name="cropType" required>
+                            <option value="">Select a crop</option>
+                            <option value="wheat">Wheat</option>
+                            <option value="rice">Rice</option>
+                            <option value="corn">Corn</option>
+                            <option value="soybeans">Soybeans</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="region">Region</label>
+                        <select id="region" name="region" required>
+                            <option value="">Select a region</option>
+                            <option value="north">North</option>
+                            <option value="south">South</option>
+                            <option value="east">East</option>
+                            <option value="west">West</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Generate Forecast</button>
+                </form>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2>Forecast Results</h2>
+                
+                <div class="results-grid">
+                    <!-- Yield and Demand -->
+                    <div class="result-card">
+                        <h3>Crop Yield & Demand</h3>
+                        <div class="result-item">
+                            <span>Predicted Yield:</span>
+                            <span id="predictedYield"></span>
+                        </div>
+                        <div class="result-item">
+                            <span>Market Demand:</span>
+                            <span id="predictedDemand"></span>
+                        </div>
+                    </div>
+
+                    <!-- Market Insights -->
+                    <div class="result-card">
+                        <h3>Market Insights</h3>
+                        <p id="marketInsights"></p>
+                    </div>
+
+                    <!-- Planting Advice -->
+                    <div class="result-card">
+                        <h3>Planting Recommendations</h3>
+                        <p id="plantingAdvice"></p>
+                        <div class="result-item">
+                            <span>Best Regions:</span>
+                            <span id="bestRegions"></span>
+                        </div>
+                    </div>
+
+                    <!-- Selling Strategy -->
+                    <div class="result-card">
+                        <h3>Selling Strategy</h3>
+                        <div class="result-item">
+                            <span>Optimal Timing:</span>
+                            <span id="sellingTiming"></span>
+                        </div>
+                        <div class="result-item">
+                            <span>Peak Months:</span>
+                            <span id="peakMonths"></span>
+                        </div>
+                    </div>
+
+                    <!-- Distribution Strategy -->
+                    <div class="result-card">
+                        <h3>Distribution Strategy</h3>
+                        <div class="result-item">
+                            <span>Target Markets:</span>
+                            <span id="recommendedMarkets"></span>
+                        </div>
+                        <div class="result-item">
+                            <span>Storage Guidance:</span>
+                            <span id="storageAdvice"></span>
+                        </div>
+                    </div>
+
+                    <!-- Confidence Score -->
+                    <div class="result-card">
+                        <h3>Forecast Confidence</h3>
+                        <div class="confidence-score">
+                            <div class="confidence-bar">
+                                <div id="confidenceLevel" class="confidence-fill"></div>
+                            </div>
+                            <span id="confidenceScore"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+                <div class="spinner"></div>
+                <p>Generating forecast...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

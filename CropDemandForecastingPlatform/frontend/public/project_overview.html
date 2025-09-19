@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AgriTech — Project Overview</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 32px; color:#222 }
+    .card { max-width:900px; margin: 24px auto; padding:24px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.08); background:#fff }
+    h1 { margin-top: 0 }
+    .meta { color:#666; font-size:14px }
+    .actions { margin-top:18px }
+    a.button { display:inline-block; padding:10px 14px; background:#2b7be3; color:#fff; border-radius:6px; text-decoration:none }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>AgriTech — Crop Demand Forecasting Platform</h1>
+    <div class="meta">Demo-ready summary — 5 minute presentation</div>
+
+    <p>This demo shows a lightweight crop demand forecasting platform with:
+      predictive models, market insights, and a recommendation engine. The frontend is a simple static UI served by a Flask backend with a few API endpoints in <code>backend/src/app.py</code>.</p>
+
+    <h3>Key Pages</h3>
+    <ul>
+      <li><strong>Login:</strong> `index.html` — demo login (pre-filled credentials available for quick demo).</li>
+      <li><strong>Welcome:</strong> `welcome.html` — summary dashboard and entry to Dashboard.</li>
+      <li><strong>Functionalities:</strong> `functionalities.html` — complete list of backend endpoints and features (recommended to open this last).</li>
+    </ul>
+
+    <h3>Quick Demo Steps (2 minutes)</h3>
+    <ol>
+      <li>Start backend: <code>cd backend</code> then <code>python -m flask --app src/app.py run</code></li>
+      <li>Open <code>http://localhost:5000</code> in a browser (use private/incognito to avoid stale localStorage).</li>
+      <li>Use demo credentials: <code>mahesha@gmail.com / m@123</code>. Click Sign In.</li>
+      <li>Open <a href="functionalities.html">Functionalities</a> to show backend API and features.</li>
+    </ol>
+
+    <div class="actions">
+      <a class="button" href="/">Back to Login</a>
+      <a class="button" href="functionalities.html" style="margin-left:10px">Open Functionalities</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* Welcome Page Styles */
+.welcome-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.welcome-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.welcome-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.welcome-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.features-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.get-started-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.get-started-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-content h1 {
+        font-size: 2rem;
+    }
+
+    .features-overview {
+        grid-template-columns: 1fr;
+    }
+}

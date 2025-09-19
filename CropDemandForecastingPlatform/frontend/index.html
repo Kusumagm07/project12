@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Demand Forecasting Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Crop Demand Forecasting Platform</h1>
+            <p>Real-time crop yield and demand predictions</p>
+        </header>
+        
+        <main>
+            <!-- Input Section -->
+            <section class="forecast-form">
+                <h2>Enter Forecast Details</h2>
+                <div id="formStatus" class="status-message"></div>
+                <form id="forecastForm">
+                    <div class="form-group">
+                        <label for="crop_type">Crop Type:</label>
+                        <select id="crop_type" name="crop_type" required>
+                            <option value="">Select a crop</option>
+                            <option value="wheat">Wheat</option>
+                            <option value="rice">Rice</option>
+                            <option value="corn">Corn</option>
+                            <option value="soybeans">Soybeans</option>
+                            <option value="cotton">Cotton</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="region">Region:</label>
+                        <select id="region" name="region" required>
+                            <option value="">Select a region</option>
+                            <option value="north">North</option>
+                            <option value="south">South</option>
+                            <option value="east">East</option>
+                            <option value="west">West</option>
+                            <option value="central">Central</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit">Get Forecast</button>
+                </form>
+            </section>
+            
+            <section class="results" id="results" style="display: none;">
+                <h2>Forecast Results</h2>
+                
+                <!-- Core Metrics -->
+                <div class="result-card">
+                    <div class="metric">
+                        <h3>Predicted Yield</h3>
+                        <p id="yieldValue">-- tons/hectare</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Predicted Demand</h3>
+                        <p id="demandValue">-- tons</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Confidence Level</h3>
+                        <p id="confidenceLevel">--%</p>
+                    </div>
+                </div>
+
+                <!-- Market Insights -->
+                <div class="insight-section">
+                    <h3>Market Insights</h3>
+                    <div class="insight-card">
+                        <p id="marketInsights">Loading market insights...</p>
+                        <div class="timing-advice">
+                            <h4>Optimal Selling Strategy</h4>
+                            <p>Best Timing: <span id="sellingTiming">--</span></p>
+                            <p>Peak Months: <span id="peakMonths">--</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planting Recommendations -->
+                <div class="insight-section">
+                    <h3>Planting Recommendations</h3>
+                    <div class="insight-card">
+                        <p id="plantingAdvice">Loading planting advice...</p>
+                        <div class="region-info">
+                            <h4>Regional Analysis</h4>
+                            <p>Best Regions: <span id="bestRegions">--</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Distribution Strategy -->
+                <div class="insight-section">
+                    <h3>Distribution Strategy</h3>
+                    <div class="insight-card">
+                        <div class="markets-section">
+                            <h4>Recommended Markets</h4>
+                            <ul id="recommendedMarkets">
+                                <li>Loading market recommendations...</li>
+                            </ul>
+                        </div>
+                        <div class="storage-section">
+                            <h4>Storage & Transportation</h4>
+                            <p id="storageAdvice">Loading storage advice...</p>
+                            <p id="transportationTips">Loading transportation tips...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

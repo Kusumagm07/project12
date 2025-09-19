@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - AgriTech Platform</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/welcome.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <nav class="welcome-nav">
+            <div class="logo">AgriTech</div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </nav>
+
+        <main class="welcome-content">
+            <h1>Welcome to AgriTech Platform</h1>
+            
+            <div class="features-overview">
+                <div class="feature-card">
+                    <h3>Crop Demand Forecasting</h3>
+                    <p>Get accurate predictions for crop yields and market demand using advanced machine learning models.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Market Insights</h3>
+                    <p>Access real-time market analysis and price trends to make informed decisions about crop sales.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Smart Recommendations</h3>
+                    <p>Receive personalized recommendations for planting times, crop selection, and resource optimization.</p>
+                </div>
+            </div>
+
+            <button class="get-started-btn" onclick="window.location.href='/dashboard.html'">
+                Get Started
+            </button>
+        </main>
+    </div>
+
+    <script src="js/welcome.js"></script>
+</body>
+</html>
